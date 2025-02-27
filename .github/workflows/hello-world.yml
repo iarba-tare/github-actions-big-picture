@@ -10,5 +10,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - run: |
-          echo "Hello World"
+          echo "$(cat hello-world.txt)"
           uname -a
+          whoami
+          cat /proc/cpu
+          free -m

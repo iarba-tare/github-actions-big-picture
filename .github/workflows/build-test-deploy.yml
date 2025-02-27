@@ -15,3 +15,18 @@ jobs:
         run: npm install
       - name: Run npm build
         run: npm run build
+  
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Use node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run nmp install
+        run: npm install
+      - name: Run npm test
+        run: npm test

@@ -1,0 +1,14 @@
+name: Hello-World
+
+on: [push]
+
+jobs:
+  Hello-World-Job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout
+      - run: |
+          echo "Hello World"
+          uname -a

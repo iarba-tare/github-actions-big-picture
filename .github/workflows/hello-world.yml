@@ -13,5 +13,5 @@ jobs:
           echo "$(cat hello_world.txt)"
           uname -a
           whoami
-          cat /proc/cpu
+          cat /proc/cpuinfo
           free -m
